@@ -1,0 +1,23 @@
+---
+layout: default
+---
+
+<link rel="stylesheet" href="{{ "/assets/style/people.css" | relative_url }}">
+<script type="text/javascript" src="{{ "/assets/js/people.js" | relative_url }}"></script>
+
+<div class="people-list">
+</div>
+
+<script>
+    // Load all the pubs as JS.
+    window.linqs = window.linqs || {};
+    window.linqs.pubs = window.linqs.pubs || {};
+    window.linqs.pubs.pubs = {{ site.data.pubs | jsonify }};
+    window.linqs.pubs.baseURL = "{{ '/' | absolute_url }}";
+</script>
+
+<script>
+    $(document).ready(function() {
+        window.linqs.people.renderList(Object.keys(window.linqs.people.TITLES_MAP));
+    });
+</script>

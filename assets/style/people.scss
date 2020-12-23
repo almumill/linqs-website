@@ -1,0 +1,48 @@
+---
+# Top-level Sass files need some front matter (just this comment is enough).
+---
+
+
+.personList {
+}
+
+.personImageContainer {
+  width: 24.9999%;
+  float: left;
+  display: table;
+  padding-top: 16px;
+}
+
+.personInfo {
+  width: 64.99999%;
+  box-sizing: border-box;
+  display: table;
+  float: right;
+  align-content: left;
+}
+
+.personEntry {
+  display: table;
+  border-top: 1px solid lightgray;
+  padding-top: 16px;
+}
+
+.personName {
+  font-weight: bold;
+}
+
+.personLocation {
+
+}
+
+.researchInterests {
+  font-weight: bold;
+}
+
+.groupTitle {
+  font-size: 24pt;
+  font-weight: bold;
+}
+
+.personImage {
+}
