@@ -1,10 +1,10 @@
-  {
-    "name": "Alex Miller",
-    "group": "undergrad",
-    "email": "almumill AT ucsc.edu",
-    "location": "Engineering 2, Room 483",
-    "website_text": "almumill.github.io",
-    "website_url": "https://almumill.github.io/",
-    "interests": "My research interests lie in the use of probabilistic graphical models. I'm specifically interested in applying them to problems in biomedical NLP and in using them to perform online collective inference.",
-    "picture": "/assets/images/alexmiller.png"
-  }
+{
+  "name": "Alex Miller",
+  "group": "undergrad",
+  "email": "almumill AT ucsc.edu",
+  "location": "Engineering 2, Room 483",
+  "website_text": "almumill.github.io",
+  "website_url": "https://almumill.github.io/",
+  "interests": "My research interests lie in the use of probabilistic graphical models. I'm specifically interested in applying them to problems in biomedical NLP and in using them to perform online collective inference.",
+  "picture": "/assets/images/alexmiller.png"
+}
