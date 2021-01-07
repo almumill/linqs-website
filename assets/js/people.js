@@ -44,6 +44,15 @@ window.linqs.people.peoplejson = [
     "picture": "/assets/images/charlesdickens.png"
   },
   {
+    "name": "Caleb Levy",
+    "group": "postdoc",
+    "email": "cclevy AT ucsc.edu",
+    "location": "Engineering 2, Room 483",
+    "website": "https://caleblevy.github.io/",
+    "interests": "My work includes social science applications of statistical relational models, causal inference and graph embeddings. I am particularly interested how these topics can be applied to improve the fairness of machine learning methods.",
+    "picture": "/assets/images/caleblevy.png"
+  },
+  {
     "name": "Lise Getoor",
     "degree": "Ph.D. Degree 2001, Stanford University",
     "group": "lise",
