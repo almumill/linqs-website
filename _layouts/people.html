@@ -11,13 +11,14 @@ layout: default
 <script>
     // Load all the pubs as JS.
     window.linqs = window.linqs || {};
-    window.linqs.pubs = window.linqs.pubs || {};
-    window.linqs.pubs.pubs = {{ site.data.pubs | jsonify }};
-    window.linqs.pubs.baseURL = "{{ '/' | absolute_url }}";
+    window.linqs.people = window.linqs.people || {};
+    window.linqs.people.people = {{ site.data.people | jsonify }};
+    window.linqs.people.roles = {{ site.data.config.roles | jsonify }};
+    window.linqs.people.baseURL = "{{ '/' | absolute_url }}";
 </script>
 
 <script>
     $(document).ready(function() {
-        window.linqs.people.renderList(Object.keys(window.linqs.people.TITLES_MAP));
+        window.linqs.people.renderList(Object.keys(window.linqs.people.roles));
     });
 </script>
