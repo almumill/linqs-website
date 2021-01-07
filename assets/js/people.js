@@ -21,7 +21,8 @@ window.linqs.people.peoplejson = [
     "group": "undergrad",
     "email": "almumill AT ucsc.edu",
     "location": "Engineering 2, Room 483",
-    "website": "almumill.github.io",
+    "website_text": "almumill.github.io",
+    "website_url": "https://almumill.github.io/",
     "interests": "My research interests lie in the use of probabilistic graphical models. I'm specifically interested in applying them to problems in biomedical NLP and in using them to perform online collective inference.",
     "picture": "/assets/images/alexmiller.png"
   },
@@ -30,7 +31,8 @@ window.linqs.people.peoplejson = [
     "group": "masters",
     "email": "rsingh52 AT ucsc.edu",
     "location": "Engineering 2, Room 483",
-    "website": "rishikasb.github.io",
+    "website_text": "rishikasb.github.io",
+    "website_url": "https://rishikasb.github.io/",
     "picture": "/assets/images/rishikasingh.png",
     "interests": "My research interests concern the issue of fairness in machine learning, specifically recommender systems. This can be extended to multi-stakeholder frameworks or involving complicated network effects.",
   },
@@ -39,7 +41,8 @@ window.linqs.people.peoplejson = [
     "group": "phd",
     "email": "cadicken AT ucsc.edu",
     "location": "Engineering 2, Room 483",
-    "website": "https://users.soe.ucsc.edu/~cadicken",
+    "website_text": "https://users.soe.ucsc.edu/~cadicken",
+    "website_url": "https://users.soe.ucsc.edu/~cadicken",
     "interests": "My research interests are generally in machine learning and graphical models. I am particularly interested in improving the scalability, performance, and robustnesses of structured prediction algorithms using modern ideas from optimization. I am excited to work on applications related to fair machine learning and online settings.",
     "picture": "/assets/images/charlesdickens.png"
   },
@@ -48,7 +51,8 @@ window.linqs.people.peoplejson = [
     "group": "postdoc",
     "email": "cclevy AT ucsc.edu",
     "location": "Engineering 2, Room 483",
-    "website": "https://caleblevy.github.io/",
+    "website_text": "https://caleblevy.github.io/",
+    "website_url": "https://caleblevy.github.io/",
     "interests": "My work includes social science applications of statistical relational models, causal inference and graph embeddings. I am particularly interested how these topics can be applied to improve the fairness of machine learning methods.",
     "picture": "/assets/images/caleblevy.png"
   },
@@ -58,7 +62,8 @@ window.linqs.people.peoplejson = [
     "group": "lise",
     "email": "getoor AT soe.ucsc.edu",
     "location": "Engineering 2, Room 341B",
-    "website": "getoor.soe.ucsc.edu",
+    "website_text": "getoor.soe.ucsc.edu",
+    "website_url": "https://getoor.soe.ucsc.edu/",
     "picture": "/assets/images/lisegetoor.jpg",
     "interests": "My general research interests are in machine learning, reasoning under uncertainty, databases and artificial intelligence. Other topics of interest to me include: data integration, database query optimization and approximate query processing, entity resolution, information extraction, utility elicitation, planning under uncertainty, contraint-based reasoning, abstraction and problem reformulation. The theme of my research is building and using statistical models of structured, semi-structured and unstructured data to do useful things.",
   }
@@ -114,7 +119,7 @@ window.linqs.people.renderList = function(keys) {
           <br>
           ${person.location}
           <br>
-          ${person.website ? "<a href='" + person.website + "'>" + person.website + "</a>" : ""}
+          ${person.website_url ? "<a href='" + person.website_url + "'>" + person.website_text + "</a>" : ""}
         </span>`;
 
       entry += '<br> <br>';
