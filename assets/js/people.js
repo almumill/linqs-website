@@ -1,9 +1,16 @@
 window.linqs = window.linqs || {};
 window.linqs.people = window.linqs.people || {};
+window.linqs.utils = window.linqs.utils || {};
 
-// TODO (Alex): read json data from files instead of hard-coding it below.
-// TODO (Alex): adjust formatting (longer-term goal)
-// TODO (Alex): fix links
+window.linqs.people.ICON_MAP = {
+    'paper': 'file-text-line',
+    'poster': 'image-line',
+    'slides': 'slideshow-line',
+    'code': 'code-line',
+    'link': 'link',
+    'video': 'video',
+};
+window.linqs.people.ICON_REL_PATH = '/assets/style/vendor/remixicon.symbol.svg';
 
 window.linqs.people.peopleInGroup = function (key) {
   groupPeople = [];
@@ -22,7 +29,7 @@ window.linqs.people.peopleInGroup = function (key) {
     return 0;
   });
   return groupPeople;
-}
+};
 
 
 window.linqs.people.renderList = function(keys) {
@@ -33,15 +40,29 @@ window.linqs.people.renderList = function(keys) {
     $('.people-list').append(personList);
 
     selector = `#${key}`;
-    titleObj = window.linqs.people.roles[key];
+    titles = window.linqs.people.roles[key];
 
     if (isAffiliate) {
-      title = `<span class='groupTitle'> ${titleObj.title} </span>`;
+      title = `<span class='groupTitle'> ${titles.title} </span>`;
       $(selector).append(title);
     }
     people = window.linqs.people.peopleInGroup(key);
     people.forEach(function(person) {
       person = window.linqs.people.people[person];
+      personLinks = "";
+      console.log(person.links);
+      for (linkObj in person.links) {
+        console.log(person.links[linkObj]);
+        icon = window.linqs.people.ICON_MAP[person.links[linkObj].icon];
+        iconLink = window.linqs.utils.makeLink(window.linqs.people.baseURL, `${window.linqs.people.ICON_REL_PATH}#${icon}`);
+        personLinks += `<a href='${person.links[linkObj].url}'>`;
+        personLinks += `<svg class='svg-icon'>
+          <use xlink:href='${iconLink}'/>
+        </svg>`;
+        personLinks += `${person.links[linkObj].text}`;
+        personLinks += '</a>';
+      }
+
       entry = `<div class='${isAffiliate ? "affiliateEntry" : "liseEntry"}'>
         <div class='${isAffiliate ? "affiliateImageContainer" : "liseImageContainer"}'>
           <img src='../${person.picture}' class='${isAffiliate ? "affiliateImage" : "liseImage"}'/>
@@ -56,7 +77,7 @@ window.linqs.people.renderList = function(keys) {
           ${person.email}
           <br>
           ${person.location ? person.location + "<br>" : ""}
-          ${person.website_url ? "<a href='" + person.website_url + "'>" + person.website_text + "</a>" : ""}
+          ${personLinks}
         </span>`;
 
       entry += '<br> <br>';
@@ -68,4 +89,4 @@ window.linqs.people.renderList = function(keys) {
     });
 
   });
-}
+};

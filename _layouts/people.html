@@ -4,6 +4,7 @@ layout: default
 
 <link rel="stylesheet" href="{{ "/assets/style/people.css" | relative_url }}">
 <script type="text/javascript" src="{{ "/assets/js/people.js" | relative_url }}"></script>
+<script type="text/javascript" src="{{ "/assets/js/utils.js" | relative_url }}"></script>
 
 <div class="people-list">
 </div>
@@ -12,6 +13,7 @@ layout: default
     // Load all the pubs as JS.
     window.linqs = window.linqs || {};
     window.linqs.people = window.linqs.people || {};
+    window.linqs.utils = window.linqs.utils || {};
     window.linqs.people.people = {{ site.data.people | jsonify }};
     window.linqs.people.roles = {{ site.data.config.roles | jsonify }};
     window.linqs.people.baseURL = "{{ '/' | absolute_url }}";

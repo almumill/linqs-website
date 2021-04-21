@@ -3,8 +3,12 @@
   "group": "undergrad",
   "email": "almumill AT ucsc.edu",
   "location": "Engineering 2, Room 483",
-  "website_text": "almumill.github.io",
-  "website_url": "https://almumill.github.io/",
+  "links": [{"url": "https://almumill.github.io/",
+    "text": "Website",
+    "icon":  "link"},
+    {"url": "https://almumill.github.io/",
+    "text": "asdf",
+    "icon": "code"}],
   "interests": "I’m interested in structured prediction, probabilistic graphical models, and the development of machine learning methods which can integrate large amounts of data from heterogeneous sources. I’m particularly interested in applying machine learning methods that can leverage relational structure to problems in biology and medicine.",
   "picture": "/assets/images/alexmiller.png"
 }
