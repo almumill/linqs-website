@@ -4,8 +4,9 @@
   "group": "visiting",
   "email": "agrycner AT mpi-inf.mpg.de\n",
   "location": "",
-  "website_text": "http://people.mpi-inf.mpg.de/~agrycner/",
-  "website_url": "http://people.mpi-inf.mpg.de/~agrycner/",
+  "links": [{"url": "http://people.mpi-inf.mpg.de/~agrycner/",
+    "text": "http://people.mpi-inf.mpg.de/~agrycner/",
+    "icon":  "link"}],
   "picture": "/assets/images/adamgrycner.png",
   "current_affiliation": "Ph.D. Student, Max-Planck-Institut, Germany"
 }

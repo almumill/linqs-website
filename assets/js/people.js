@@ -3,13 +3,26 @@ window.linqs.people = window.linqs.people || {};
 window.linqs.utils = window.linqs.utils || {};
 
 window.linqs.people.ICON_MAP = {
+    'none': 'none',
     'paper': 'file-text-line',
     'poster': 'image-line',
     'slides': 'slideshow-line',
     'code': 'code-line',
     'link': 'link',
     'video': 'video',
+    'git': 'git-repository-line',
+    'file': 'file-line',
+    'article': 'article-line',
+    'mail': 'mail-line',
+    'profile': 'profile-line',
+    'braces': 'braces-line',
+    'double-quotes': 'double-quotes-r',
+    'circle-x': 'close-circle-line',
+    'circle-filled': 'close-circle-fill',
+    'x': 'close-line',
+    'book': 'book-line'
 };
+
 window.linqs.people.ICON_REL_PATH = '/assets/style/vendor/remixicon.symbol.svg';
 
 window.linqs.people.peopleInGroup = function (key) {
@@ -34,36 +47,39 @@ window.linqs.people.peopleInGroup = function (key) {
 
 window.linqs.people.renderList = function(keys) {
   keys.forEach(function(key) {
-    isAffiliate = key != 'lise';
+    let isAffiliate = key != 'lise';
 
-    personList = `<div class='${isAffiliate ? "personList" : "liseInfo"}' id='${key}'></div>`;
+    let personList = `<div class='${isAffiliate ? "personList" : "liseInfo"}' id='${key}'></div>`;
     $('.people-list').append(personList);
 
-    selector = `#${key}`;
-    titles = window.linqs.people.roles[key];
+    let selector = `#${key}`;
+    let titles = window.linqs.people.roles[key];
 
     if (isAffiliate) {
-      title = `<span class='groupTitle'> ${titles.title} </span>`;
+      let title = `<span class='groupTitle'> ${titles.title} </span>`;
       $(selector).append(title);
     }
+
     people = window.linqs.people.peopleInGroup(key);
-    people.forEach(function(person) {
-      person = window.linqs.people.people[person];
-      personLinks = "";
-      console.log(person.links);
-      for (linkObj in person.links) {
-        console.log(person.links[linkObj]);
-        icon = window.linqs.people.ICON_MAP[person.links[linkObj].icon];
-        iconLink = window.linqs.utils.makeLink(window.linqs.people.baseURL, `${window.linqs.people.ICON_REL_PATH}#${icon}`);
-        personLinks += `<a href='${person.links[linkObj].url}'>`;
-        personLinks += `<svg class='svg-icon'>
+    people.forEach(function(key) {
+      let person = window.linqs.people.people[key];
+
+      let personLinks = "";
+
+      person.links.forEach(function(linkEntry) {
+        let iconName = window.linqs.people.ICON_MAP[linkEntry.icon];
+        let iconLink = window.linqs.utils.makeLink(window.linqs.people.baseURL, `${window.linqs.people.ICON_REL_PATH}#${iconName}`);
+        let icon = `<svg class='svg-icon'>
           <use xlink:href='${iconLink}'/>
         </svg>`;
-        personLinks += `${person.links[linkObj].text}`;
+        personLinks += `<a class='personalLink' href='${linkEntry.url}'>`;
+        personLinks += `${iconName != 'none' ? icon : ''}`;
+        personLinks += `${linkEntry.icon != 'none' ? "" : ''}`;
+        personLinks += `${linkEntry.text}`;
         personLinks += '</a>';
-      }
+      });
 
-      entry = `<div class='${isAffiliate ? "affiliateEntry" : "liseEntry"}'>
+      let entry = `<div class='${isAffiliate ? "affiliateEntry" : "liseEntry"}'>
         <div class='${isAffiliate ? "affiliateImageContainer" : "liseImageContainer"}'>
           <img src='../${person.picture}' class='${isAffiliate ? "affiliateImage" : "liseImage"}'/>
         </div>

@@ -3,8 +3,9 @@
   "group": "phd",
   "email": "cadicken AT ucsc.edu",
   "location": "Engineering 2, Room 483",
-  "website_text": "https://users.soe.ucsc.edu/~cadicken",
-  "website_url": "https://users.soe.ucsc.edu/~cadicken",
+  "links": [{"url": "https://users.soe.ucsc.edu/~cadicken",
+    "text": "https://users.soe.ucsc.edu/~cadicken",
+    "icon":  "link"}],
   "interests": "My research interests are generally in machine learning and graphical models. I am particularly interested in improving the scalability, performance, and robustnesses of structured prediction algorithms using modern ideas from optimization. I am excited to work on applications related to fair machine learning and online settings.",
   "picture": "/assets/images/charlesdickens.png"
 }

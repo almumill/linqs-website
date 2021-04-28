@@ -3,8 +3,9 @@
   "group": "postdoc",
   "email": "cclevy AT ucsc.edu",
   "location": "Engineering 2, Room 483",
-  "website_text": "https://caleblevy.github.io/",
-  "website_url": "https://caleblevy.github.io/",
+  "links": [{"url": "https://caleblevy.github.io/",
+    "text": "https://caleblevy.github.io/",
+    "icon":  "link"}],
   "interests": "My work includes social science applications of statistical relational models, causal inference and graph embeddings. I am particularly interested how these topics can be applied to improve the fairness of machine learning methods.",
   "picture": "/assets/images/caleblevy.png"
 }

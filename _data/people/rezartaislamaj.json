@@ -4,8 +4,9 @@
   "group": "alum",
   "email": "rezarta AT cs.umd.edu\n",
   "location": "",
-  "website_text": "http://www.ncbi.nlm.nih.gov/CBBresearch/Fellows/Dogan/",
-  "website_url": "http://www.ncbi.nlm.nih.gov/CBBresearch/Fellows/Dogan/",
+  "links": [{"url": "http://www.ncbi.nlm.nih.gov/CBBresearch/Fellows/Dogan/",
+    "text": "http://www.ncbi.nlm.nih.gov/CBBresearch/Fellows/Dogan/",
+    "icon":  "link"}],
   "picture": "/assets/images/rezartaislamaj.png",
   "current_affiliation": "Staff Scientist, National Center for Biotechnology Information, National Library of Medicine, Maryland, MD."
 }
