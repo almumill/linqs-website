@@ -61,9 +61,3 @@
   "interests": "I’m interested in structured prediction, probabilistic graphical models, and the development of machine learning methods which can integrate large amounts of data from heterogeneous sources. I’m particularly interested in applying machine learning methods that can leverage relational structure to problems in biology and medicine.",
   "picture": "/assets/images/alexmiller.png"
 }
-paper': 'file-text-line',
-    'poster': 'image-line',
-    'slides': 'slideshow-line',
-    'code': 'code-line',
-    'link': 'link',
-    'video
