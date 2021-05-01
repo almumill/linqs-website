@@ -1,5 +1,5 @@
 {
-  "lise": {omitTitle: true},
+  "advisor": {omitTitle: true},
   "postdoc": {title: "Post Docs"},
   "phd": {title: "Ph.D. Students (In alphabetical order)"},
   "masters": {title: "Master's Students (In alphabetical order)"},

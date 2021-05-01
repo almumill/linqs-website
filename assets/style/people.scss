@@ -4,44 +4,56 @@
 
 
 .personList {
+    padding-top: 20px;
 }
 
-.affiliateImageContainer {
-  width: 24.9999%;
-  float: left;
-  display: table;
-  padding-top: 16px;
+.memberImageContainer {
+    width: 24.9999%;
+    float: left;
+    display: table;
+    padding-top: 16px;
 }
 
-.liseImageContainer {
-  width: 24.9999%;
-  display: table;
-  float: left;
-  padding-top: 16px;
+.advisorImageContainer {
+    width: 24.9999%;
+    display: table;
+    float: left;
+    padding-top: 16px;
 }
 
 .personInfo {
-  width: 64.99999%;
-  box-sizing: border-box;
-  display: inline-block;
-  float: right;
-  align-content: left;
+    width: 64.99999%;
+    box-sizing: border-box;
+    display: inline-block;
+    float: right;
+    align-content: left;
 }
 
-.affiliateEntry {
-  display: table;
-  border-top: 1px solid lightgray;
-  padding-top: 16px;
+.memberEntry {
+    display: table;
+    border-top: 1px solid lightgray;
+    padding-top: 16px;
+    padding-bottom: 25px;
 }
 
-.liseEntry {
-  display: table;
-  padding-top: 16px;
+.entrySection {
+    margin-bottom: 16px;
+}
+
+.contactAndLinks {
+    margin-bottom: -4px;
+}
+
+.advisorEntry {
+    display: table;
+    padding-top: 16px;
 }
 
 .personName {
-  font-weight: bold;
-  display: inline-block;
+    font-size: 20pt;
+    font-weight: bold;
+    display: inline-block;
+    margin-bottom: -10px;
 }
 
 .personLocation {
@@ -49,22 +61,27 @@
 }
 
 .personalLink {
-  padding-right: 10px;
+    padding-right: 10px;
 }
 
 .researchInterests {
-  font-weight: bold;
+    font-weight: bold;
 }
 
 .currentAffiliation {
-  font-weight: bold;
+    font-weight: bold;
 }
 
 
 .groupTitle {
-  font-size: 24pt;
-  font-weight: bold;
+    font-size: 24pt;
+    font-weight: bold;
+    margin-bottom: -2px;
 }
 
-.affiliateImage {
+.memberImage {
+}
+
+.advisorImage {
+      border-radius: 10px;
 }
